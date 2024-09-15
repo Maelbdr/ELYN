@@ -1,0 +1,83 @@
+/* Réinitialisation de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Arial', sans-serif; /* Police sobre et sans empattement */
+  background-color: #000; /* Fond noir en cas de problème avec la vidéo */
+  color: #fff; /* Texte blanc */
+  text-transform: uppercase; /* Tout le texte en majuscules */
+  overflow: hidden; /* Empêche le défilement si nécessaire */
+}
+
+/* Vidéo d'arrière-plan */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Vidéo derrière tout le contenu */
+  overflow: hidden;
+}
+
+.background-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* La vidéo couvre tout sans être déformée */
+  opacity: 0.7; /* Légère transparence pour que le texte soit plus lisible */
+}
+
+/* Section principale (contenu au-dessus de la vidéo) */
+.hero-section {
+  position: relative;
+  z-index: 1; /* Contenu visible par-dessus la vidéo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  text-align: center;
+}
+
+/* Titre principal */
+.hero-section h1 {
+  font-size: 3rem;
+  letter-spacing: 2px; /* Espacement pour un effet plus élégant */
+  margin-bottom: 20px;
+}
+
+/* Sous-titre ou description */
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #ddd; /* Légèrement plus foncé que le texte principal */
+}
+
+/* Boutons de service */
+.services {
+  display: flex;
+  gap: 20px; /* Espace entre les boutons */
+}
+
+.service-item {
+  text-decoration: none;
+  background-color: #333; /* Fond sobre, gris foncé */
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px; /* Boutons arrondis */
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  letter-spacing: 1px; /* Espacement pour rendre les boutons plus lisibles */
+}
+
+/* Effet au survol des boutons */
+.service-item:hover {
+  background-color: #fff;
+  color: #333; /* Inverse les couleurs au survol */
+  transform: scale(1.05); /* Légère augmentation de taille au survol */
+}
